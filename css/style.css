@@ -1,97 +1,302 @@
+
+/* selectors for all HTML tags across all pages */
+
 body {
-  background: url("../images/squairy_light.png");
+	font-size: 14.5px;
+	padding-top: 5px;
+	opacity: 100% !important;
+	line-height: 1.52947;
+	background: #3E5368;
+	font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+}
+
+h1,h2, h3 {
+	color: white;
+}
+
+a {
+	outline: none;
+}
+
+#connectTitle {
+	text-align: center;
 }
 
 .navbar-brand {
-    text-align: center;
-    background-color: #4aaaa5;
-}
-.navbar-header {
-   
-
+	font-size: 1.75em !important;
+	font-weight: bold;
 }
 
-.page-header {
-    padding-bottom: 9px;
-    margin: 30px 20px 20px;
-    border-bottom: 1px solid #eee;
+.nav li {
+	font-size: 1.25em !important;
+	font-weight: normal;
 }
 
-.navbar {
-	background: #ffffff;
-	border-bottom: 2px solid #cccccc;
+section p {
+	line-height: 190%;
 }
 
-nav li {
-	display: inline;
-	background: #ffffff;	
+p {
+	color: white;
+}
+
+aside {
+	margin-top: 5px;
+	background: #3E5368;
+}
+
+#panel-body {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.socialIcons {
+	position: relative;
+}
+
+.socialIcons div {
+	position: absolute;
+	left: -50px;
+	top: 68px;
+	width: 164px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.2s linear;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.socialIcons:hover div {
+	opacity: 1;
+	visibility: visible;
+}
+
+.socialIcons img {
+	transition: all 0.1s linear;
+}
+
+.socialIcons img:hover {
+	opacity: 0.5;
+}
+
+
+/* selectors unique to index.html*/
+#profilePicture {
+	width: 300px;
+	margin: 10px 25px 10px 0px;
+	float: left;
+	transition: all 0.5s ease;
+}
+
+#profilePicture:hover {
+	width: 100%;
+	float: none;
+}
+
+
+/* selectors unique to portfolio.html*/
+#PortImagesNames {
+	width: 100%;
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.PortImages {
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+
+.PortImages:last-child {
+	margin-bottom: 0px;
+}
+
+.PortImages img {
+	width: inherit;
+}
+
+.PortImagesNames {
+	background: #4e5d6c;
+	width: 100%;
+	height: 60px;
+	padding-top: 12px;
+	position: absolute;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+
+	transition: all 0.2s linear;
+}
+
+.PortImagesNames:hover {
+	background: #777777;
+}
+
+input, textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3px 9px;
+}
+
+input[type=submit] {
+	background: #4e5d6c;
+	border: 0;
+	outline: none;
+	width: auto;
+	margin-top: 15px;
+	padding: 10px 30px;
+	font-size: 18px;
+	color: white;
+	transition: all 0.2s linear;
+	width: 50%;
+}
+
+input[type=submit]:hover {
+	background: #777777;
+}
+
+textarea {
+	height: 200px;
+}
+
+label {
+	color: white;
+}
+
+form {
+	padding-top: 70px;
+}
+
+
+/* Media Queries*/
+
+@media screen and (max-width: 980px) {
+	#panel-body {
+		justify-content: flex-start;
+	}
+
+	.socialIcons {
+		margin-right: 10px;
+	}
+
+	#profilePicture {
+		width: 250px;
+	}
+
+	.PortImages {
+		width: 330px;
+		height: 246px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding: 0;
+	}
+
+	nav {
+		position: static !important;
+	}
+
+	.main {
+		margin-top: -11px;
+		padding: 0px 25px;
+	}
+
+	.PortImages {
+		width: 275px;
+		height: 205px;
+	}
+
+	section {
+	    animation-duration: 0s !important;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	
+	.PortImages {
+			min-width: 275px !important;
+			height: 100%;
+			min-height: 205px !important;
+			margin: 0 15px 40px 15px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		
+	#profilePicture {
+			width: 100%;
+			margin: 10px 0;
+		}
+
+	.move-in-left {
+		animation-name: move_in_left;
+	    animation-duration: 0.8s;
+	    animation-timing-function: ease-out;
+	}
+}
+
+@keyframes move_in_left {
+	0%   {visibility: hidden; transform: translate3d(-1000px, 0, 0);}
+	19%  {visibility: hidden; transform: translate3d(-1000px, 0, 0);}
+	20%  {visibility: visible; transform: translate3d(-1000px, 0, 0);}
+	100% {transform: translate3d(0, 0, 0);}
+}
+
+.fade-in {
+	animation-name: fade_in;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+}
+
+@keyframes fade_in {
+	0%   {opacity: 0; transform: rotate3d(0, 1, 0, 90deg);}
+	100% {opacity: 1; transform: rotate3d(0, 1, 0, 0deg);}
+}
+
+.fade-in-later {
+	animation-name: fade_in_later;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes fade_in_later {
+	0%   {opacity: 0;}
+	30%	 {opacity: 0;}
+	80%  {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  
+  margin-bottom: 61px;
 }
 
 .connectIcons {
 	width: 75px;
-	height:75px;
+	height: 75px;
 }
 
-.center-block {
-    display: block;
-    margin-left: auto;
-    margin-right-right: auto;
-    display: inline;
-
- }
- 
- .navPipe {
-	position: relative;
+.footer {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 61px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
- h1, h2, h3 {
-	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-size: 24px;
-	color: #4aaaa5;
-	font-weight: bold; 
-}
-.col-md-8 {
-    padding-right: 15px;
-    padding-left: 15px;
-    background: #ffffff;
-}*/
-.col-md-4 {
-   	
-}
-
-footer {
-	background: #666666;
-	border-top: 5px solid #4aaaa5;
-	height: 100px;
-    display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #cccccc;
-
-}
-
-/*
-
-@media screen and (max-width: 979px) {
-	
-}
-
-@media screen and (max-width: 768px) {
-
-	.img-thumbnail {
-		width: 50%;
-		margin-bottom: 10px;
-	}
-
-}
-
-@media screen and (max-width: 640px) {
-	.img-thumbnail {
-		width: 100%;
-		margin-bottom: 10px;
-	}
-	.navbar-brand {
-		width: 100%;
-		text-align: center;
-	}
+.footer p {
+	margin: 0;
 }
