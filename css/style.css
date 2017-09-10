@@ -237,13 +237,6 @@ form {
 		width: 100%;
 	    }	
 
-	#bioHrLine {
-		margin-bottom: 30px;
-	}
-
-	#portfolioTitle {
-		text-align: center;
-	}
 }
 
 @media screen and (max-width: 480px) {
