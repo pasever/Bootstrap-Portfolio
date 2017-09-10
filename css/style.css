@@ -1,4 +1,4 @@
-/* selectors for all HTML tags across all pages */
+/* selectors for all HTML tags across all 3 pages */
 
 body {
 	font-size: 14.5px;
@@ -82,6 +82,7 @@ aside {
 
 
 /* selectors unique to index.html*/
+
 #profilePicture {
 	width: 300px;
 	margin: 10px 25px 10px 0px;
@@ -197,13 +198,11 @@ form {
 		padding: 0;
 	}
 
+	#connectTitle{
+		text-align: left;
+	}
 	nav {
 		position: static !important;
-	}
-
-	.main {
-		margin-top: -11px;
-		padding: 0px 25px;
 	}
 
 	.PortImages {
@@ -211,9 +210,14 @@ form {
 		height: 205px;
 	}
 
-	section {
-	    animation-duration: 0s !important;
+	#labelName {
+		width: 80%;
 	}
+
+	#labelEmail {
+		width: 90%;
+	}
+	
 }
 
 @media screen and (max-width: 640px) {
@@ -224,7 +228,15 @@ form {
 			min-height: 250px !important;
 			margin: 0 15px 40px 15px;
 		}
+
+	#labelName {
+		width: 100%;
 	}
+
+	#labelEmail {
+		width: 100%;
+	}	
+}
 
 @media screen and (max-width: 480px) {
 		
