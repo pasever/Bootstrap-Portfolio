@@ -226,16 +226,24 @@ form {
 			min-width: 250px !important;
 			height: 100%;
 			min-height: 250px !important;
-			margin: 0 15px 40px 15px;
+			margin: 0 15px 30px 35px;
 		}
 
 	#labelName {
 		width: 100%;
-	}
+	    }
 
 	#labelEmail {
 		width: 100%;
-	}	
+	    }	
+
+	#bioHrLine {
+		margin-bottom: 30px;
+	}
+
+	#portfolioTitle {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 480px) {
