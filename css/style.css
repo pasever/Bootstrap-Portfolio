@@ -237,6 +237,10 @@ form {
 		width: 100%;
 	    }	
 
+	#connectTitle {
+		text-align: center;
+	}  
+
 }
 
 @media screen and (max-width: 480px) {
