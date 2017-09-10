@@ -239,7 +239,19 @@ form {
 
 	#connectTitle {
 		text-align: center;
-	}  
+	} 
+
+	#portfolioTitle {
+		text-align: center;
+	} 
+
+	form {
+		padding-top: 35px;
+	}
+
+	#portfolioTitle {
+		margin-bottom: 30px;
+	}
 
 }
 
